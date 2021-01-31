@@ -4,5 +4,5 @@ workers_dev = true
 webpack_config = "webpack.config.js"
 account_id  = "8c50494cddceb8025eb56e2256d00fee"
 kv_namespaces = [
-    { binding = "sa", id = "023bbe72e9c649188b19913078a0d768" }
+    { binding = "sa", id = "e8da67808863494c8eed016dad5c466a" }
 ]

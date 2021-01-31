@@ -22,8 +22,6 @@ jobs:
         uses: cloudflare/wrangler-action@1.3.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          preCommands: |
-             wrangler kv:key put SERVICE_ACCOUNT_JSON '${{ secrets.SERVICE_ACCOUNT_JSON }}' --binding sa
           secrets: |
               TITLE
               DEFAULT_ROOT_ID
