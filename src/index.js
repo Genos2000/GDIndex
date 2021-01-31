@@ -64,7 +64,7 @@ async function handleRequest(request) {
     } = await gd.listFolderByPath(path, self.props.default_root_id);
     let fileht = `<table class="table">
       <tr>
-      <th>Sr. No.</th>
+      <th style="width: 5rem;">No.</th>
       <th>File Name</th>
       <th>Size</th>
       </tr>
@@ -72,7 +72,7 @@ async function handleRequest(request) {
 
     let folderht = `<table class="table">
         <tr>
-        <th>Sr. No.</th>
+        <th style="width: 5rem;">No.</th>
         <th>Folder Name</th>
         </tr>
         `;
@@ -96,17 +96,16 @@ async function handleRequest(request) {
       if (x < 1024) {
         s = `${x} B`
       } else if (x < 1024 * 1024) {
-        s = `${(x / 1024).toFixed(2)} KB (${x} bytes)`
+        s = `${(x / 1024).toFixed(2)} KB`
       } else if (x < 1024 * 1024 * 1024) {
-        s = `${(x / (1024 * 1024)).toFixed(2)} MB (${x} bytes)`
+        s = `${(x / (1024 * 1024)).toFixed(2)} MB`
       } else {
-        s = `${(x / (1024 * 1024 * 1024)).toFixed(2)} GB (${x} bytes)`
+        s = `${(x / (1024 * 1024 * 1024)).toFixed(2)} GB`
       }
       fileht += `<tr><td>${filecount}</td><td><a href="${p}">${f.name}</a></td><td>${s}</td></tr>`
     }
     fileht += `</table>`
     folderht += `</table>`
-
     let title = self.props.title;
     if (path != '/') {
       folderht = `← <a href="${parent}">Parent Directory</a><br>` + folderht
@@ -120,10 +119,11 @@ async function handleRequest(request) {
 <title>${title}</title>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style="font-family: 'Open Sans', sans-serif;">
 <div class="container">
-<h1 style="color: #009668;">${title}</h1>
+<h1 style="color: #009668;font-size: 2rem;margin-bottom: 1rem;">${title}</h1>
 ${folderht}
 ${fileht}
 </div>
