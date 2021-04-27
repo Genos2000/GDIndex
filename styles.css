@@ -7,6 +7,7 @@ html, body {
 table, td, th, tr {
     color: white;
 	word-break: break-all;
+    min-width: 5rem;
 }
 
 .table td, .table th {
@@ -17,6 +18,7 @@ h1#title {
     color: #16f1b0;
     font-size: 2rem;
     margin-bottom: 1rem;
+    word-break: break-all;
 }
 
 A:any-link {

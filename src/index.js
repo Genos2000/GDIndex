@@ -121,7 +121,7 @@ async function handleRequest(request) {
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akhilnarang/GDIndex@master/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Genos2000/GDIndex@master/styles.css">
 </head>
 <body>
 <div class="container">
