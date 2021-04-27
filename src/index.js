@@ -117,13 +117,15 @@ async function handleRequest(request) {
 <html>
 <head>
 <title>${title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akhilnarang/GDIndex@master/styles.css">
 </head>
-<body style="font-family: 'Open Sans', sans-serif;">
+<body>
 <div class="container">
-<h1 style="color: #009668;font-size: 2rem;margin-bottom: 1rem;">${title}</h1>
+<h1 id="title">${title}</h1>
 ${folderht}
 ${fileht}
 </div>
